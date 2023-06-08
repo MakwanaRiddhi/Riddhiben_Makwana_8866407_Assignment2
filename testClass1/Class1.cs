@@ -150,6 +150,51 @@ namespace testClass1
             //assert
             Assert.AreEqual(expected, actual);
         }
-        
+        //4.Three (3) tests for verifying a zero length for one or more sides
+        [Test]//test4.1
+        public void VerifyingZeroLengthForOneOrMoreSides_Input0and25and50_OutputVerifyingZeroLengthForOneOrMoreSides()
+        {
+            //Arrange
+            int firstside = 0;
+            int secondside = 25;
+            int thirdside = 50;
+
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]//test4.2
+        public void VerifyingZeroLengthForOneOrMoreSides_Input56and0and45_OutputVerifyingZeroLengthForOneOrMoreSides()
+        {
+            //Arrange
+            int firstside = 56;
+            int secondside = 0;
+            int thirdside = 45;
+
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]//test4.3
+        public void VerifyingZeroLengthForOneOrMoreSides_Input62and73and0_OutputVerifyingZeroLengthForOneOrMoreSides()
+        {
+            //Arrange
+            int firstside = 62;
+            int secondside = 73;
+            int thirdside = 0;
+
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
