@@ -196,5 +196,52 @@ namespace testClass1
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        //5.Three (3) tests for verifying an invalid response (other than a zero length)
+        [Test]//test5.1
+        public void VerifyingInvalidResponseOtherthanZerolength_Input35and40and80_OutputVerifyingInvalidResponseOtherthanZerolength()
+        {
+            //Arrange
+            int firstside = 35;
+            int secondside = 40;
+            int thirdside = 80;
+
+            string expected = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]//test5.2
+        public void VerifyingInvalidResponseOtherthanZerolength_Input26and49and95_OutputVerifyingInvalidResponseOtherthanZerolength()
+        {
+            //Arrange
+            int firstside = 26;
+            int secondside = 49;
+            int thirdside = 95;
+
+            string expected = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]//test5.3
+        public void VerifyingInvalidResponseOtherthanZerolength_Input60and25and98_OutputVerifyingInvalidResponseOtherthanZerolength()
+        {
+            //Arrange
+            int firstside = 60;
+            int secondside = 25;
+            int thirdside = 98;
+
+            string expected = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
