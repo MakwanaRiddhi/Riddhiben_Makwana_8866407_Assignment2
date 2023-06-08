@@ -23,7 +23,9 @@ namespace testClass1
             string expected = "The triangle is valid and is an EQUILATERAL";
 
             //Act
-           
+           string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
