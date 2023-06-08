@@ -27,5 +27,52 @@ namespace testClass1
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        //Three (3) tests for a valid isosceles triangle
+        [Test]
+        public void ValidIsoscelesTriangle_Input35and35and50_OutputValidIsoscelesTriangle()
+        {
+            //Arrange
+            int firstside = 35;
+            int secondside = 35;
+            int thirdside = 50;
+
+            string expected = "The triangle is valid and is an ISOSCELES";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ValidIsoscelesTriangle_Input50and35and35_OutputValidIsoscelesTriangle()
+        {
+            //Arrange
+            int firstside = 50;
+            int secondside = 35;
+            int thirdside = 35;
+
+            string expected = "The triangle is valid and is an ISOSCELES";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ValidIsoscelesTriangle_Input35and50and35_OutputValidIsoscelesTriangle()
+        {
+            //Arrange
+            int firstside = 35;
+            int secondside = 50;
+            int thirdside = 35;
+
+            string expected = "The triangle is valid and is an ISOSCELES";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstside, secondside, thirdside);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
